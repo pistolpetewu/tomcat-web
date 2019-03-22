@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  tomcat:
+    restart: always
+    container_name: tomcat
+    image: pistolpetewu/tomcat-web:1.0.0
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/billows/web/ROOT.war:/usr/local/tomcat/webapps/ROOT.war
+    networks:
+      web_net:
+        ipv4_address: 192.168.200.2
+
+networks:
+  web_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.200.0/24
