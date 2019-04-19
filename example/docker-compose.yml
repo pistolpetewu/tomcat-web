@@ -4,7 +4,7 @@ services:
   tomcat:
     restart: always
     container_name: tomcat
-    image: pistolpetewu/tomcat-web:1.0.0
+    image: pistolpetewu/tomcat-web:1.0.2
     tty: true
     ports:
       - "8080:8080"
