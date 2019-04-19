@@ -1,4 +1,4 @@
-FROM tomcat:9.0.16-jre8
+FROM tomcat:8.5.28-jre8-alpine
 
 LABEL maintainer="pistolpetewu" email="pistolpete.wu@gmail.com"
 
